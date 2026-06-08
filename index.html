@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form By Mehdi Alizade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+        integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="fluid-canvas"></canvas>
+
+    <div class="form-container">
+        <div class="close-btn"></div>
+
+        <h2 class="form-title">Qeydiyyat Formu</h2>
+
+        <form id="regForm" autocomplete="off">
+            <div class="input-group">
+                <input type="text" id="name" required>
+                <label for="name" class="required">Ad</label>
+            </div>
+
+            <form id="regForm" autocomplete="off">
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name" class="required">Soyad</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email" class="required">Email address</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="country" required>
+                    <label for="country">Country</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="phone" required>
+                    <label for="phone" class="required">Telefon Nömrəsi</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password">
+                    <label for="password" class="required">Parol</label>
+                    <!-- <i class="fa-solid fa-key"></i> -->
+                </div>
+
+                <div class="terms-group">
+                    <input type="checkbox" id="terms" required>
+                    <p>Buranı kliklədiyiniz zaman təhlükəsizlik meyarlarımızı və istifadə qaydalarımızı qəbul etmiş
+                        olursunuz</p>
+                </div>
+
+                <button type="submit" class="submit-btn">Hesab Yarat</button>
+            </form>
+
+            <div class="signin-text">
+                Hal-Hazırda Hesabın Var? <a href="#">Giriş Et</a>
+            </div>
+    </div>
+
+    <div class="footer-credit">
+    made by Mehdi Alizade
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

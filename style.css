@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #160429; 
+}
+
+
+#fluid-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.form-container {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.96); 
+    width: 100%;
+    max-width: 420px;
+    padding: 45px 35px;
+    border-radius: 6px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 
+                0 0 20px rgba(138, 43, 226, 0.15);
+    backdrop-filter: blur(20px); 
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 22px;
+    color: #12b3a8;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.form-title {
+    text-align: center;
+    color: #0c73b8;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.form-title::before, .form-title::after {
+    content: '•';
+    color: #12b3a8;
+    margin: 0 10px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #12b3a8;
+    outline: none;
+    background: transparent;
+    color: #222;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom-color: #0c73b8;
+}
+
+.input-group label {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    color: #666;
+    font-size: 15px;
+    transition: 0.25s ease all;
+    pointer-events: none;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -18px;
+    left: 2px;
+    font-size: 12px;
+    color: #0c73b8;
+    font-weight: 600;
+}
+
+.fa-solid {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    width: 18px;
+    height: 12px;
+    background: #0056b3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.terms-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.terms-group input {
+    margin-top: 3px;
+    cursor: pointer;
+}
+.terms-group p {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 3px;
+    background: linear-gradient(to right, #0076c0, #00d5c3);
+    cursor: pointer;
+    transition: filter 0.3s, transform 0.1s;
+}
+.submit-btn:hover {
+    filter: brightness(1.1);
+}
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.signin-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #555;
+}
+.signin-text a {
+    color: #0076c0;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signin-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.6); 
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: lowercase;
+    pointer-events: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-credit::first-letter {
+    text-transform: capitalize;
+}
